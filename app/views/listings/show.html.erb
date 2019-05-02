@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bisnis name:</strong>
+  <%= @listing.bisnis_name %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @listing.alamat %>
+</p>
+
+<p>
+  <strong>Phone n:</strong>
+  <%= @listing.phone_n %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @listing.url %>
+</p>
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

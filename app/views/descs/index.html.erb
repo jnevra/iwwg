@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Descs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Desc name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @descs.each do |desc| %>
+      <tr>
+        <td><%= desc.desc_name %></td>
+        <td><%= link_to 'Show', desc %></td>
+        <td><%= link_to 'Edit', edit_desc_path(desc) %></td>
+        <td><%= link_to 'Destroy', desc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Desc', new_desc_path %>

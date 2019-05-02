@@ -1,0 +1,22 @@
+<%= form_with(model: desc, local: true) do |form| %>
+  <% if desc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(desc.errors.count, "error") %> prohibited this desc from being saved:</h2>
+
+      <ul>
+      <% desc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :desc_name %>
+    <%= form.text_field :desc_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
